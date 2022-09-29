@@ -1,0 +1,67 @@
+.checkout-container {
+	margin: 1em 3em;
+}
+.checkout-container legend {
+	font-size: 1.5em;
+	font-weight: 500;
+	margin: 10px 0;
+}
+.checkout-form label {
+	font-size: 1.1em;
+	display: inline-block;
+	margin: 10px 0;
+}
+.checkout-form input {
+	width: 100%;
+	padding: 10px;
+	font-size: 1em;
+}
+.checkout-form button {
+	width: 100%;
+	padding: 10px;
+	background: blue;
+	border: 2px solid orange;
+	color: #fff;
+	display: inline-block;
+	margin: 1em 0;
+	font-size: 1em;
+}
+.paypal-container {
+	background: #fff;
+	box-shadow: hsl(0, 0%, 80%) 0 0 16px;
+	padding: 1em;
+	display: none;
+	z-index: -2;
+}
+
+@media only screen and (min-width: 550px) {
+	.checkout-container {
+		margin: 10.5em 12em 2em 12em;
+	}
+	.checkout-form button {
+		width: 60%;
+	}
+}
+
+@media only screen and (min-width: 780px) {
+	.checkout-container {
+		margin: 16em 13em 2em 13em;
+	}
+	.checkout-container legend {
+		margin-left: 1.6%;
+	}
+	.checkout-form label {
+		display: none;
+	}
+	.checkout-form input {
+		width: 47.5%;
+		display: inline-block;
+		margin: 8px 0;
+		margin-left: 1.5%;
+	}
+	.checkout-form button {
+		margin-left: 1.5%;
+		width: 47.5%;
+		display: block;
+	}
+}

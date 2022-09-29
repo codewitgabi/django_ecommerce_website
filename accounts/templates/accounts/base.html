@@ -1,0 +1,77 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="{% static 'css/shop.css' %}">
+	<link rel="stylesheet" href="{% static 'css/signup3.css' %}">
+	<title>{% block title %} {% endblock %}</title>
+</head>
+<body>
+	<nav class="shop-primary-nav">
+		<i class="fa fa-bars shop-nav-toggle-button" id= "shop-nav-btn-open"></i>
+		<div class="shop-main-nav-links">
+			<i class="fa fa-bars shop-nav-toggle-button" id="shop-nav-btn-close"></i>
+			<ul>
+				<li><a href="{% url 'products:shop' %}">SHOP</a></li>
+				<li><a href="{% url 'products:cart' %}"><i class= "fa fa-cart-plus"><sup id= "cart-total"></sup></i></a></li>
+				<li><a href="{% url 'products:checkout' %}">CHECKOUT</a></li>
+				{% if request.user.is_authenticated %}
+				<li><button onclick= "logout()">LOGOUT</button></li>
+				{% else %}
+				<li><button onclick= "login()">LOGIN</button></li>
+				{% endif %}
+			</ul>
+			
+		</div>
+		<div class="shop-nav-search-bar">
+			<form action= "{% url 'products:shop' %}">
+				<input type="search" name="q" id="shop-nav-search-bar" placeholder="Search Product..." required>
+			</form>
+		</div>
+	</nav>
+	
+	<nav class="shop-secondary-nav">
+		<img src="{% static 'img/background.png' %}" id="shop-secondary-nav-logo">
+		<span>Gabi's Shop</span>
+	</nav>
+	
+	<hr class="shop-content-seperator">
+	
+
+	{% block content %}
+	
+	{% endblock %}
+
+	<script>
+		var openBtn = document.getElementById("shop-nav-btn-open");
+		var closeBtn = document.getElementById("shop-nav-btn-close");
+		var navBar = document.getElementsByClassName("shop-main-nav-links");
+		var logout_url = "{% url 'accounts:logout' %}";
+		var login_url = "{% url 'accounts:login' %}";
+		var getCartTotalURL = "{% url 'products:getCartTotal' %}";
+		var cartTotal = document.getElementById("cart-total");
+		
+		openBtn.addEventListener("click", function () {
+			navBar[0].style.left = "0";
+		})
+		closeBtn.addEventListener("click", function () {
+			navBar[0].style.left = "-200px";
+		})
+		
+		function logout () {
+			window.location = logout_url;
+		}
+		
+		function login () {
+			window.location = login_url;
+		}
+		
+	</script>
+	
+</body>
+</html>

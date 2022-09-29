@@ -1,0 +1,24 @@
+{% extends "products/base.html" %}
+{% block title %} Shop {% endblock %}
+
+
+{% block content %}
+
+	{% include "products/categories_nav.html" %}
+	
+	<div class="shop-product-row">
+		<legend>All Products</legend>
+		
+		{% for product in products %}
+		<div class="shop-product-col">
+			<a href= "{{ product.image.url }}"><img src="{{ product.image.url }}"></a>
+			<p>{{ product.name }}</p>
+			<p>${{ product.price }}</p>
+			<button class= "update-cart" data-product= "{{ product.id }}" data-action= "add">Add To Cart</button>
+		</div>
+		{% endfor %}
+		
+	</div>
+	
+	
+{% endblock %}

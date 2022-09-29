@@ -1,0 +1,73 @@
+
+.shop-accounts-label {
+	font-size: 1.5em;
+	font-weight: 500;
+	margin: 10px 0;
+}
+.shop-accounts-form label {
+	display: inline-block;
+	font-size: 1em;
+	font-weight: 500;
+	margin: 5px 0;
+}
+.shop-accounts-form input {
+	width: 100%;
+	font-size: 1em;
+	font-weight: 500;
+	padding: 10px;
+	border-radius: 5px;
+}
+.shop-accounts-form button {
+	width: 100%;
+	padding: 10px;
+	display: inline-block;
+	font-size: 1.5em;
+	margin: 15px 0;
+	color: #fff;
+	background: orange;
+	border: 1px solid #fff;
+}
+	
+.shop-accounts-form a {
+	color: blue;
+}
+
+.shop-accounts-form ul li {
+	list-style: none;
+	font-size: 12px;
+	color: red;
+	margin-top: 5px;
+}
+	
+/* Android Devices */
+@media only screen and (max-width: 550px) {
+	.shop-accounts-container {
+		box-shadow: hsl(0, 0%, 80%) 0 0 16px;
+		background: #fff;
+		border-radius: 5px;
+		margin: 2em;
+		padding: 10px 1.5em;
+	}
+}
+
+/* Larger Phones (Tablets) */
+@media only screen and (min-width: 550px) {
+	.shop-accounts-container {
+		margin: 10.5em 9.5em 2em 9.5em;
+		box-shadow: hsl(0, 0%, 80%) 0 0 16px;
+		background: #fff;
+		border-radius: 5px;
+		padding: 10px 1.5em;
+	}
+}
+
+/* Medium Devices */
+@media only screen and (min-width: 780px) {
+	.shop-accounts-container {
+		margin: 16em 15em 2em 15em;
+	}
+	.shop-accounts-form button {
+		display: block;
+		width: 50%;
+	}
+}

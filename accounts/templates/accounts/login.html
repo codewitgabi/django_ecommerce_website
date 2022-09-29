@@ -1,0 +1,31 @@
+{% extends "accounts/base.html" %}
+{% block title %} Login {% endblock %}
+
+
+{% block content %}
+	
+	<div class="shop-accounts-container">
+		<legend class="shop-accounts-label">Login</legend>
+		<div class="shop-accounts-form">
+			<form method="POST">
+			{% csrf_token %}
+				
+				{% if form.errors %}
+					<ul>
+						<li>{{ login_error }}</li>
+					</ul>
+				{% endif %}
+				
+				{% for field in form %}
+					<label for="confirm">{{ field.label }}*</label>
+					{{ field }}
+				{% endfor %}
+				<button type="submit">Login</button>
+				<span>Don't have an Account?</span>
+				<a href="{% url 'accounts:signup' %}">Signup</a>
+			</form>
+		</div>
+	</div>
+	
+	
+{% endblock %}

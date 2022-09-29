@@ -1,0 +1,25 @@
+{% extends "accounts/base.html" %}
+{% block title %} Signup {% endblock %}
+
+
+{% block content %}
+	
+	<div class="shop-accounts-container">
+		<legend class="shop-accounts-label">Signup</legend>
+		<div class="shop-accounts-form">
+			<form method="POST">
+			{% csrf_token %}
+				{% for field in form %}
+				<label for="confirm">{{ field.label }}*</label>
+				{{ field }}
+				{{ field.errors }}
+				{% endfor %}
+				<button type="submit">Signup</button>
+				<span>Already Signed up?</span>
+				<a href="{% url 'accounts:login' %}">Login</a>
+			</form>
+		</div>
+	</div>
+
+
+{% endblock %}

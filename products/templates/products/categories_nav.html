@@ -1,0 +1,8 @@
+<div class="shop-large-screen-categories">
+	<legend class="large-categories-label">CATEGORIES</legend>
+	<hr class="shop-content-seperator">
+	<p><a href="{% url 'products:shop' %}">All</a></p>
+	{% for category in categories %}
+		<p><a href="{% url 'products:shop' %}?q={{ category }}">{{ category }}</a></p>
+	{% endfor %}
+</div>

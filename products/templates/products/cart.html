@@ -1,0 +1,102 @@
+{% extends "products/base.html" %}
+{% block title %} Cart {% endblock %}
+
+
+{% block content%}
+
+	<div class="cart-container">
+		<div class="cart-content-wrapper">
+			<span class="float">Item</span>
+			<span class="float">Quantity</span>
+			<span class="float">Price</span>
+		</div>
+		
+		<div id= "cart-contents"></div>
+		
+	</div>
+	
+	<div class="cart-summary">
+		<span><h4>Total:</h4></span>
+		<span><h4 id= "cart-price-total"></h4></span>
+	</div>
+
+	<a href="{% url 'products:checkout' %}"><button id="checkout-btn">Checkout</button></a>
+	
+	<script>
+		var cartContent = document.getElementById("cart-contents");
+		var cartUpdateURL = "{% url 'products:updateCartItem' %}";
+		var login_redirect_url = "{% url 'accounts:login' %}";
+		
+		function updateCartProducts () {
+			var cart_price_total = document.getElementById("cart-price-total");
+			
+			var request = new XMLHttpRequest();
+			request.open("GET", "{% url 'products:getCartProducts' %}")
+			request.onload = function () {
+				var content = JSON.parse(request.responseText);
+				
+				var cartHTML = "";
+				var products_price_total = content.products_price_total;
+				cart_price_total.textContent = `$ ${content.products_price_total}`;
+				
+				for (i=0; i<content.products.length; i++) {
+					cartHTML += `
+						<div class="cart-content-wrapper">
+						<div class="cart-product-image float">
+							<img src= ${content.products[i].image} class="float">
+						</div>
+						<div class="float down">
+							<div><i class="fa fa-plus cart-update" data-product= ${content.products[i].id} data-action= "add"></i></div>
+							<div>${content.products[i].quantity}</div>
+							<div><i class="fa fa-minus cart-update" data-product= ${content.products[i].id} data-action= "remove"></i></div>
+						</div>
+						<div class="float" style="padding-top: 1.5em;">$ ${content.products[i].price}</div>
+						</div>
+					`;
+				}
+				cartContent.innerHTML = cartHTML;
+
+				var fromCartUpdateBtns = document.getElementsByClassName("cart-update");
+				
+				for (var btn of fromCartUpdateBtns) {
+					btn.addEventListener("click", function () {
+						var cart_productID = this.dataset.product;
+						var cart_action = this.dataset.action;
+						
+						//alert(cart_productID)
+						//alert(cart_action)
+						
+						if (user !== "AnonymousUser") {
+							cartUpdateItems(cart_productID, cart_action);	
+						} else {
+							window.location = login_redirect_url;
+						}
+					})
+				}
+				
+				function cartUpdateItems (cart_productID, cart_action) {
+					fetch(cartUpdateURL, {
+						method: "POST",
+						headers: {
+							"Content-Type": "application/json",
+							"X-CSRFToken": csrftoken
+						},
+						body: JSON.stringify({"product_id": cart_productID, "action": cart_action})
+					})
+					.then(response => response.json())
+					.then(data => {
+						console.log(data)
+					})
+					.catch(error => {
+						alert(error)
+					})
+				}
+			}
+			request.send()
+		}
+		
+		window.setInterval(updateCartProducts, 1000)
+	</script>
+	
+
+{% endblock %}
