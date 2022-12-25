@@ -242,7 +242,7 @@
 		box-shadow: hsl(0, 0%, 80%) 0 0 16px;
 		background: #fff;
 		position: fixed;
-		top: 5em;
+		top: 5.5em;
 		left: 1.8em;
 		padding: 1.2em;
 		overflow: auto;
@@ -255,6 +255,10 @@
 	.shop-large-screen-categories p {
 		font-size: 1em;
 		margin: 0.5em 0;
+	}
+	.shop-large-screen-categories p > a {
+		text-decoration: none;
+		color: blue;
 	}
 	.shop-product-row {
 		margin: 5em 1em 1em 10em;
