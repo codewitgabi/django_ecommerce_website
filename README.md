@@ -7,9 +7,9 @@ Starting building high quality web applications as you try out this project on y
 You should have python installed on your system with a version greater than 3.6
 If you don't have django installed, run the command below
 `pip install django>=3.2`
-Once it has downloaded, run;\
+Once it has downloaded, run;
 
-OR\
+OR
 
 `pip install -r requirements.txt`
 
