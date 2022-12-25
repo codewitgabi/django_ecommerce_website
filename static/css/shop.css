@@ -168,14 +168,13 @@
 
 /* Larger Phones (Tablets) */
 @media only screen and (min-width: 550px) {
-
 	.shop-primary-nav {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		box-shadow: hsl(0, 0%, 80%) 0 0 10px;
-		background: #fff;
-		padding: 1em 1em;
+		background: orangered;
+		padding: 0.4em 1em;
 		position: fixed;
 		top: 0;
 		left: 0;
@@ -192,22 +191,21 @@
 	}
 	.shop-main-nav-links ul li a {
 		text-decoration: none;
-		font-size: 0.9em;
+		font-size: 0.7em;
 		font-weight: 500;
 		color: #000;
 	}
 	.shop-main-nav-links ul li button {
-		padding: 0.5em 2em;
+		padding: 0.5em;
 		border-radius: 6px;
-		font-size: 1em;
+		font-size: 0.6em;
 		font-weight: 500;
 		background: #e4e813;
 		border: none;
 	}
 	#shop-nav-search-bar {
 		width: 100%;
-		padding: 0.5em 10px;
-		font-size: 1em;
+		padding: 0.2em;
 		font-weight: 400;
 	}
 	.shop-secondary-nav {
@@ -215,19 +213,20 @@
 		align-items: center;
 		padding: 10px 0 0 1em;
 		position: absolute;
-		top: 4.3em;
+		top: 2em;
 		left: 0;
 		right: 0;
 		z-index: -1;
 	}
 	#shop-secondary-nav-logo {
-		width: 60px;
-		height: 60px;
-		border-radius: 30px;
+		width: 50px;
+		height: 50px;
+		border-radius: 25px;
+		object-fit: cover;
 	}
 	.shop-secondary-nav span {
-		margin-left: 1em;
-		font-size: 1.5em;
+		margin-left: 0.1em;
+		font-size: 0.8em;
 		font-weight: 500;
 		font-family: helvetica;
 		text-transform: capitalize;
@@ -242,16 +241,14 @@
 	.shop-large-screen-categories {
 		box-shadow: hsl(0, 0%, 80%) 0 0 16px;
 		background: #fff;
-		width: 14em;
 		position: fixed;
 		top: 5em;
-		left: 2em;
-		bottom: 2em;
-		padding: 2em;
+		left: 1.8em;
+		padding: 1.2em;
 		overflow: auto;
 	}
 	.large-categories-label {
-		font-size: 1.5em;
+		font-size: 0.8em;
 		font-weight: 500;
 		text-align: center;
 	}
@@ -260,10 +257,10 @@
 		margin: 0.5em 0;
 	}
 	.shop-product-row {
-		margin: 10em 1em 1em 18em;
+		margin: 5em 1em 1em 10em;
 	}
 	.shop-product-row legend {
-		font-size: 1.5em;
+		font-size: 1em;
 		font-weight: 500;
 		margin-left: 1.6%;
 		margin-bottom: 0.5em;
@@ -319,31 +316,38 @@
 /* Medium Devices */
 @media only screen and (min-width: 780px) {
 	.shop-primary-nav {
-		padding: 0.35em 4em;
+		padding: 0.35em 15em;
 		font-size: 0.5em;
+	}
+	#shop-nav-search-bar {
+		padding: 0.2em;
+		width: 100%;
 	}
 	.shop-main-nav-links ul li {
 		margin-left: 1.5em;
+	}
+	.shop-main-nav-links ul li button {
+		font-size: 1.2em;
 	}
 	.shop-main-nav-links ul li a {
 		font-size: 1.5em;
 	}
 	#shop-secondary-nav-logo {
-		width: 80px;
-		height: 80px;
-		border-radius: 40px;
+		width: 50px;
+		height: 50px;
+		border-radius: 25px;
 	}
 	.shop-large-screen-categories {
-		top: 14em;
+		top: 5em;
 	}
 	.shop-product-row {
-		margin-top: 14.5em;
+		margin-top: 5em;
 	}
 	.shop-product-col {
 		width: 22.5%;
 	}
 	.shop-secondary-nav {
-		top: 7.5em;
+		top: 1.5em;
 	}
 }
 
