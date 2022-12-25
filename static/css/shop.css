@@ -77,8 +77,8 @@
 		border-radius: 20px;
 	}
 	.shop-secondary-nav span {
-		margin-left: 10px;
-		font-size: 1em;
+		margin-left: 0.1em;
+		font-size: 0.8em;
 	}
 	.shop-content-seperator {
 		margin: 10px;
@@ -156,7 +156,7 @@
 		color: #fff;
 	}
 	footer {
-		margin: 1em;
+		margin: 1em 0 2em 0;
 		text-align: center;
 		clear: both;
 	}
@@ -307,8 +307,9 @@
 		clear: both;
 	}
 	footer > p {
-		font-size: 1.2em;
+		font-size: 1em;
 		font-weight: 500;
+		margin: 2em 0;
 	}
 	
 }
