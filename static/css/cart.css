@@ -49,17 +49,17 @@
 
 @media only screen and (min-width: 550px) {
 	.cart-container {
-		margin: 10.5em 12em 2em 12em;
+		margin: 7em 5em 2em 5em;
 	}
 	.cart-summary {
-		margin: 2em 12em;
+		margin: 2em 5em;
 	}
 	#checkout-btn {
-		margin-right: 12em;
+		margin-right: 5em;
 	}
 }
 
-@media only screen and (min-width: 780px) {
+@media only screen and (min-width: 850px) {
 	.cart-container {
 		margin: 5em 15em 2em 15em;
 	}
