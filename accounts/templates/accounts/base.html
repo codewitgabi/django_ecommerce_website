@@ -8,7 +8,7 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="{% static 'css/shop.css' %}">
-	<link rel="stylesheet" href="{% static 'css/signup3.css' %}">
+	<link rel="stylesheet" href="{% static 'css/signup.css' %}">
 	<title>{% block title %} {% endblock %}</title>
 </head>
 <body>
@@ -18,7 +18,7 @@
 			<i class="fa fa-bars shop-nav-toggle-button" id="shop-nav-btn-close"></i>
 			<ul>
 				<li><a href="{% url 'products:shop' %}">SHOP</a></li>
-				<li><a href="{% url 'products:cart' %}"><i class= "fa fa-cart-plus"><sup id= "cart-total"></sup></i></a></li>
+				<li><a href="{% url 'products:cart' %}"><i class= "fa fa-cart-plus"><sup id= "cart-total">0</sup></i></a></li>
 				<li><a href="{% url 'products:checkout' %}">CHECKOUT</a></li>
 				{% if request.user.is_authenticated %}
 				<li><button onclick= "logout()">LOGOUT</button></li>
@@ -36,7 +36,7 @@
 	</nav>
 	
 	<nav class="shop-secondary-nav">
-		<img src="{% static 'img/background.png' %}" id="shop-secondary-nav-logo">
+		<img src="{% static 'img/logo.png' %}" id="shop-secondary-nav-logo">
 		<span>Gabi's Shop</span>
 	</nav>
 	

@@ -10,7 +10,8 @@
 		justify-content: space-between;
 		align-items: center;
 		background: #fff;
-		padding: 1.4em 1em;
+		/* padding: 1.4em 1em; previous */
+		padding: 1em 1em;
 		box-shadow: hsl(0, 0%, 80%) 0 0 10px;
 	}
 	.shop-main-nav-links {
@@ -20,7 +21,7 @@
 		width: 200px;
 		top: 0;
 		left: -200px;
-		transition: 1s;
+		transition: 0.4s;
 		overflow: auto;
 		padding-bottom: 3em;
 		box-shadow: hsl(0, 0%, 80%) 0 0 0;
@@ -212,7 +213,7 @@
 		display: flex;
 		align-items: center;
 		padding: 10px 0 0 1em;
-		position: absolute;
+		position: fixed;
 		top: 2em;
 		left: 0;
 		right: 0;
@@ -261,7 +262,7 @@
 		color: blue;
 	}
 	.shop-product-row {
-		margin: 5em 1em 1em 10em;
+		margin: 3.5em 1em 1em 10em;
 	}
 	.shop-product-row legend {
 		font-size: 1em;
@@ -346,7 +347,7 @@
 		top: 5em;
 	}
 	.shop-product-row {
-		margin-top: 5em;
+		margin-top: 3.5em;
 	}
 	.shop-product-col {
 		width: 22.5%;

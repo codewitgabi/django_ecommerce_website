@@ -53,21 +53,30 @@
 /* Larger Phones (Tablets) */
 @media only screen and (min-width: 550px) {
 	.shop-accounts-container {
-		margin: 10.5em 9.5em 2em 9.5em;
+		margin: 7em auto 2em auto;
 		box-shadow: hsl(0, 0%, 80%) 0 0 16px;
 		background: #fff;
 		border-radius: 5px;
 		padding: 10px 1.5em;
+		width: 300px;
+		border-radius: 10px;
+	}
+	.shop-accounts-form button {
+		border-radius: 5px;
+		font-size: 1em;
 	}
 }
 
 /* Medium Devices */
 @media only screen and (min-width: 780px) {
 	.shop-accounts-container {
-		margin: 16em 15em 2em 15em;
+		margin: 7em auto 2em auto;
+		border-radius: 10px;
 	}
 	.shop-accounts-form button {
 		display: block;
 		width: 50%;
+		font-size: 1em;
+		border-radius: 5px;
 	}
 }
