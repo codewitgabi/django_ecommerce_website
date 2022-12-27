@@ -25,7 +25,7 @@
 		overflow: auto;
 		padding-bottom: 3em;
 		box-shadow: hsl(0, 0%, 80%) 0 0 0;
-		z-index: 2;
+		z-index: 200;
 	}
 	.shop-main-nav-links ul {
 		margin: 2em 0 2em 2em;
