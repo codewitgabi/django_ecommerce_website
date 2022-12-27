@@ -36,7 +36,7 @@
 
 @media only screen and (min-width: 550px) {
 	.checkout-container {
-		margin: 5em 5em 2em 5em;
+		margin: 6em 5em 2em 5em;
 	}
 	.checkout-form button {
 		width: 60%;
@@ -59,12 +59,32 @@
 
 @media only screen and (min-width: 780px) {
 	.checkout-container {
-		margin: 5em 20em 2em 20em;
+		margin: 5em 10em 2em 10em;
 	}
 	.checkout-container legend {
 		margin-left: 1.6%;
 	}
 	.checkout-form label {
 		display: none;
+	}
+}
+
+
+@media only screen and (min-width: 850px) {
+	.checkout-container {
+		margin: 8em 8em 2em 8em;
+	}
+}
+
+@media only screen and (min-width: 950px) {
+	.checkout-container {
+		margin: 7em 13em 2em 13em;
+	}
+}
+
+
+@media only screen and (min-width: 1050px) {
+	.checkout-container {
+		margin: 7em 25% 2em 25%;
 	}
 }
